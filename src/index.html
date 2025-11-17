@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A digital app with an interactive map to share and explore user-generated content from various locations."
+    />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#7c3aed" />
+    <meta name="msapplication-TileColor" content="#7c3aed" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="App" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/images/story.png" />
+    <link rel="apple-touch-icon" href="/images/story.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/images/icon-512x512.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <title>App — Digital Application</title>
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+
+    <!-- View Transitions API Support -->
+    <meta name="view-transition" content="same-origin" />
+
+    <script type="module" src="/scripts/index.js"></script>
+  </head>
+  <body>
+    <!-- Skip to content link for accessibility -->
+    <a
+      href="#main-content"
+      class="skip-to-content"
+      aria-label="Skip to main content"
+    >
+      Skip to main content
+    </a>
+
+    <!-- Loading indicator -->
+    <div id="loading-indicator" class="loading-indicator" aria-hidden="true">
+      <div class="spinner"></div>
+      <span>Loading...</span>
+    </div>
+
+    <header role="banner">
+      <div class="main-header container">
+        <a class="brand-name" href="#/" aria-label="App — Home page">
+          <span class="brand-text">App</span>
+        </a>
+
+        <nav
+          id="navigation-drawer"
+          class="navigation-drawer"
+          role="navigation"
+          aria-label="Main navigation menu"
+        >
+          <ul id="nav-list" class="nav-list" role="menubar">
+            <li role="none">
+              <a href="#/" role="menuitem" tabindex="0">🏠 Home</a>
+            </li>
+            <li role="none">
+              <a href="#/stories" role="menuitem" tabindex="0">📚 Stories</a>
+            </li>
+            <li role="none">
+              <a href="#/favorites" role="menuitem" tabindex="0">❤️ Favorites</a>
+            </li>
+            <li role="none">
+              <a href="#/add-story" role="menuitem" tabindex="0">➕ Add Content</a>
+            </li>
+            <li role="none">
+              <a href="#/login" role="menuitem" tabindex="0">🔐 Login</a>
+            </li>
+            <li role="none">
+              <a href="#/register" role="menuitem" tabindex="0">📝 Register</a>
+            </li>
+            <li role="none">
+              <a href="#/test" role="menuitem" tabindex="0">🔧 Test API</a>
+            </li>
+            <li role="none">
+              <a href="#/about" role="menuitem" tabindex="0">ℹ️ About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            id="notification-toggle-btn"
+            class="header-action-btn notification-btn"
+            aria-label="Toggle push notifications"
+            title="Enable/Disable notifications"
+            style="display: none"
+          >
+            🔕
+          </button>
+          <button
+            id="pwa-install-btn"
+            class="header-action-btn install-btn"
+            aria-label="Install application to device"
+            title="Install this app to your device"
+            style="display: none"
+          >
+            <span class="install-icon">📱</span>
+            <span class="install-text">Install</span>
+          </button>
+        </div>
+
+        <button
+          id="drawer-button"
+          class="drawer-button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-icon"></span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" class="main-content" role="main" tabindex="-1">
+      <!-- Fallback content during initialization -->
+      <div
+        id="initialization-status"
+        style="
+          padding: 2rem;
+          text-align: center;
+          background: #f0f0f0;
+          margin: 1rem;
+          border-radius: 8px;
+        "
+      >
+        <p>🔄 Initializing the app...</p>
+        <p>
+          <small>If the page doesn't load within a few seconds, please refresh.</small>
+        </p>
+      </div>
+    </main>
+
+    <footer role="contentinfo" class="main-footer">
+      <div class="container">
+        <p>&copy; 2024 App. A digital interactive application.</p>
+      </div>
+    </footer>
+  </body>
+</html>

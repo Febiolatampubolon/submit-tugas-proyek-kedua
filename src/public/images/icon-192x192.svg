@@ -1,0 +1,8 @@
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <rect width="192" height="192" rx="24" fill="#2196F3"/>
+  <path d="M48 72h96v12H48V72zm0 24h96v12H48V96zm0 24h72v12H48v-12z" fill="white"/>
+  <circle cx="36" cy="78" r="6" fill="white"/>
+  <circle cx="36" cy="102" r="6" fill="white"/>
+  <circle cx="36" cy="126" r="6" fill="white"/>
+  <text x="96" y="160" font-family="system-ui" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Story Catalog</text>
+</svg>

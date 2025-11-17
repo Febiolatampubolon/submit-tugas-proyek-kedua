@@ -1,0 +1,72 @@
+{
+  "name": "App - Digital Application",
+  "short_name": "App",
+  "description": "A digital app with an interactive map to share and explore user-generated content from various locations",
+  "start_url": "/story-catalog/",
+  "scope": "/story-catalog/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#2196F3",
+  "background_color": "#ffffff",
+  "categories": ["books", "education", "social"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/story-catalog/images/story.png",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/story-catalog/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Add Story",
+      "short_name": "Add",
+      "description": "Create new story with location",
+      "url": "/story-catalog/#/add-story",
+      "icons": [
+        {
+          "src": "/story-catalog/images/story.png",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "View Map",
+      "short_name": "Map",
+      "description": "Explore stories on map",
+      "url": "/story-catalog/#/stories",
+      "icons": [
+        {
+          "src": "/story-catalog/images/story.png",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "Favorite Stories",
+      "short_name": "Favorites",
+      "description": "View saved stories",
+      "url": "/story-catalog/#/favorites",
+      "icons": [
+        {
+          "src": "/story-catalog/images/story.png",
+          "sizes": "192x192",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}
