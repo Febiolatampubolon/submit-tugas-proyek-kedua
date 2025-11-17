@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  build-and-deploy:
+  build-and-upload:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,13 +29,15 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Upload artifact for deployment
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload static files for Pages
+        id: upload-pages
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+          # optional: retention-days: 1
 
   deploy:
-    needs: build-and-deploy
+    needs: build-and-upload
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -43,4 +45,5 @@ jobs:
 
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
+        id: deploy
